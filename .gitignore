@@ -1,5 +1,5 @@
 # get rid of development files
-output.mp4
+out/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

@@ -1,4 +1,5 @@
 import cv2
+from pathlib import Path
 
 
 # Open the default camera
@@ -10,7 +11,7 @@ frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
 
 # Define the codec and create VideoWriter object
 fourcc = cv2.VideoWriter_fourcc(*'mp4v')
-output = cv2.VideoWriter('output.mp4', fourcc, 20.0, (frame_width, frame_height))
+output = cv2.VideoWriter(Path("out") / "video.mp4", fourcc, 60.0, (frame_width, frame_height))
 
 while True:
     frame = cap.read()[1]
